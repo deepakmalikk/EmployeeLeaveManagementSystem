@@ -6,7 +6,7 @@ This demo app allows employees to apply for leave and view leave statuses, while
 
 ---
 
-## ✨ Features
+## Features
 
 - **Mock login** via a dropdown selecting a user (employee or manager — no real authentication)
 - **Employee View:**
@@ -34,7 +34,6 @@ App.js # Main app, routes, and NavBar integration
 index.js # Entry point, Redux Provider wrapping
 ```
 
-
 ---
 
 ## 🚀 How to Run Locally
@@ -45,16 +44,21 @@ index.js # Entry point, Redux Provider wrapping
 git clone https://github.com/deepakmalikk/EmployeeLeaveManagementSystem.git
 cd EmployeeLeaveManagementSystem
 ```
+
 ### 2. Install Dependencies
+
 ```bash
 npm install
 ```
 
 ### 3. Start the App
+
 ```bash
 npm start
 ```
+
 - The app will run at http://localhost:3000.
+
 ## 📘 Usage Guide
 
 ### 🔐 Login
@@ -89,6 +93,7 @@ npm start
 - **Redux Toolkit** – Simplified and efficient state management solution for React.
 - **React Router** – Client-side routing to navigate between login, dashboards, and views.
 - **CSS** – Used for styling and creating a responsive layout.
+
 ## 🔮 Future Improvements
 
 - Integrate with a backend to enable:
@@ -108,5 +113,3 @@ This project is intended for **educational and demonstration purposes only**.
 
 Feel free to use, modify, or extend it for learning, assessments, or as a foundation for real-world applications.  
 No warranties or guarantees are provided.
-
-
