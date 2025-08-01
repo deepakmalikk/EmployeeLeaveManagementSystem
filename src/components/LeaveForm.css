@@ -1,0 +1,30 @@
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+form select,
+form input,
+form button {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #4a90e2;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:disabled {
+    background: #dbe4ed;
+    color: #aaa;
+    cursor: not-allowed;
+}

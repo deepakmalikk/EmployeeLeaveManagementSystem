@@ -3,12 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 const leaveSlice = createSlice({
   name: "leave",
   initialState: {
-    requests: [] // { id, userId, type, startDate, endDate, reason, status }
+    requests: []
   },
   reducers: {
     addLeave: (state, action) => {
       state.requests.push({
-        id: Date.now(), // simple id
+        id: Date.now(),
         ...action.payload,
         status: "pending"
       });

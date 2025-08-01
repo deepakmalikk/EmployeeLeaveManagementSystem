@@ -1,9 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import './LeaveList.css';
 
 function LeaveList({ forManager }) {
   const { user } = useSelector(state => state.auth);
   const requests = useSelector(state => state.leave.requests);
+
+  if (!user) return null;
 
   // For employees: show only their requests
   // For manager: show all requests
@@ -15,7 +18,11 @@ function LeaveList({ forManager }) {
       <table>
         <thead>
           <tr>
-            <th>Type</th><th>From</th><th>To</th><th>Reason</th><th>Status</th>
+            <th>Type</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Reason</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
