@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+Leave Management System (Frontend - React)
+A simple Leave Management System frontend built using React.js, Redux Toolkit, and React Router.
+This demo app allows employees to apply for leave and view leave statuses, while managers can review, approve, or reject leave requests.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Login via a dropdown selecting a user (employee or manager — no real authentication).
 
-## Available Scripts
+Employee View:
 
-In the project directory, you can run:
+Apply for leave with type, start/end dates, and reason.
 
-### `npm start`
+View their submitted leave requests and current status.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Manager View:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+View all leave requests from all employees.
 
-### `npm test`
+Approve or reject pending leave requests.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Navigation handled by React Router.
 
-### `npm run build`
+State management with Redux Toolkit.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Form validation to prevent invalid submissions.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Responsive layout with clean UI.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Project Structure
+text
+/src
+  /components      # UI components: NavBar, LeaveForm, LeaveList
+  /pages           # Main pages: Login, EmployeeDashboard, ManagerDashboard
+  /store           # Redux slices and store setup
+  /data            # Hardcoded user data for demo login
+  App.js           # Main app, routes, and NavBar integration
+  index.js         # Entry point, Redux Provider wrapping
+How to Run Locally
+1. Clone the repository or download the ZIP
+bash
+git clone https://github.com/your-username/leave-management-system.git
+cd leave-management-system
+(Replace the URL with your repository link if needed)
 
-### `npm run eject`
+2. Install dependencies
+Using npm:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+bash
+npm install
+Or using yarn:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+yarn
+3. Start the app
+bash
+npm start
+or
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bash
+yarn start
+This command will launch the React development server and open the app in your browser at http://localhost:3000.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Usage Guide
+Login
+Select a user from the dropdown on the login screen.
 
-## Learn More
+Employees will be redirected to their dashboard.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Managers will go to the management dashboard.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Employee Dashboard
+Use the form to apply for leave (all fields required).
 
-### Code Splitting
+View your leave requests listed below with the current approval status.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Logout using the button in the top navigation bar.
 
-### Analyzing the Bundle Size
+Manager Dashboard
+See all leave requests from employees.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Approve or reject pending requests using the provided buttons.
 
-### Making a Progressive Web App
+Logout using the top navigation button.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Important Notes
+This app uses mock authentication and in-memory state. All data resets on page refresh.
 
-### Advanced Configuration
+No backend integration is included; it’s designed for frontend assessment and demonstration.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Easily extended to include API calls for real-world use.
 
-### Deployment
+Responsibilities are separated clearly for maintainability and scalable UI.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Technologies Used
+React.js (with hooks)
 
-### `npm run build` fails to minify
+Redux Toolkit for state management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+React Router for navigation
+
+CSS for styling components
+
+Future Improvements
+Integrate with backend for persistent data and real authentication.
+
+Add notifications and better UI feedback.
+
+Enhance form validations and user experience.
+
+Implement localStorage or IndexedDB to persist data across page reloads.
+
+License
+This project is for educational purposes and demo only.
