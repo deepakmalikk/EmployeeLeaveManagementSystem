@@ -1,112 +1,112 @@
-Leave Management System (Frontend - React)
-A simple Leave Management System frontend built using React.js, Redux Toolkit, and React Router.
+# Leave Management System (Frontend - React)
+
+A simple Leave Management System frontend built using **React.js**, **Redux Toolkit**, and **React Router**.
+
 This demo app allows employees to apply for leave and view leave statuses, while managers can review, approve, or reject leave requests.
 
-Features
-Login via a dropdown selecting a user (employee or manager — no real authentication).
+---
 
-Employee View:
+## ✨ Features
 
-Apply for leave with type, start/end dates, and reason.
+- **Mock login** via a dropdown selecting a user (employee or manager — no real authentication)
+- **Employee View:**
+  - Apply for leave with type, start/end dates, and reason
+  - View submitted leave requests and approval status
+- **Manager View:**
+  - View all leave requests from employees
+  - Approve or reject pending leave requests
+- **Navigation** handled by React Router
+- **State management** with Redux Toolkit
+- **Form validation** to prevent invalid submissions
+- **Responsive layout** with a clean UI
 
-View their submitted leave requests and current status.
+---
 
-Manager View:
+## 🗂️ Project Structure
 
-View all leave requests from all employees.
-
-Approve or reject pending leave requests.
-
-Navigation handled by React Router.
-
-State management with Redux Toolkit.
-
-Form validation to prevent invalid submissions.
-
-Responsive layout with clean UI.
-
-Project Structure
-text
+```
 /src
-  /components      # UI components: NavBar, LeaveForm, LeaveList
-  /pages           # Main pages: Login, EmployeeDashboard, ManagerDashboard
-  /store           # Redux slices and store setup
-  /data            # Hardcoded user data for demo login
-  App.js           # Main app, routes, and NavBar integration
-  index.js         # Entry point, Redux Provider wrapping
-How to Run Locally
-1. Clone the repository or download the ZIP
-bash
-git clone https://github.com/your-username/leave-management-system.git
-cd leave-management-system
-(Replace the URL with your repository link if needed)
+/components # UI components: NavBar, LeaveForm, LeaveList
+/pages # Main pages: Login, EmployeeDashboard, ManagerDashboard
+/store # Redux slices and store setup
+/data # Hardcoded user data for demo login
+App.js # Main app, routes, and NavBar integration
+index.js # Entry point, Redux Provider wrapping
+```
 
-2. Install dependencies
-Using npm:
 
-bash
+---
+
+## 🚀 How to Run Locally
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/deepakmalikk/EmployeeLeaveManagementSystem.git
+cd EmployeeLeaveManagementSystem
+```
+### 2. Install Dependencies
+```bash
 npm install
-Or using yarn:
+```
 
-bash
-yarn
-3. Start the app
-bash
+### 3. Start the App
+```bash
 npm start
-or
+```
+- The app will run at http://localhost:3000.
+## 📘 Usage Guide
 
-bash
-yarn start
-This command will launch the React development server and open the app in your browser at http://localhost:3000.
+### 🔐 Login
 
-Usage Guide
-Login
-Select a user from the dropdown on the login screen.
+- Select a user (Employee or Manager) from the dropdown on the login screen.
+- Employees are redirected to their dashboard.
+- Managers are taken to the management dashboard.
 
-Employees will be redirected to their dashboard.
+### 👩‍💼 Employee Dashboard
 
-Managers will go to the management dashboard.
+- Fill out the form to apply for leave (all fields required).
+- View submitted leave requests and their current status.
+- Logout using the button in the top navigation bar.
 
-Employee Dashboard
-Use the form to apply for leave (all fields required).
+### 🧑‍💼 Manager Dashboard
 
-View your leave requests listed below with the current approval status.
+- View all leave requests from employees.
+- Approve or reject pending requests using the provided buttons.
+- Logout using the button in the top navigation bar.
 
-Logout using the button in the top navigation bar.
+## ⚠️ Important Notes
 
-Manager Dashboard
-See all leave requests from employees.
+- This app uses **mock authentication** with hardcoded users.
+- All state is **in-memory** — data will reset on page refresh.
+- There is **no backend integration** — the application is meant for frontend assessment and demonstration only.
+- Designed to be **easily extendable** with API calls and persistent data storage.
+- Code is structured with clear separation of concerns to support **maintainability and scalability**.
 
-Approve or reject pending requests using the provided buttons.
+## 🛠️ Technologies Used
 
-Logout using the top navigation button.
+- **React.js** – Frontend library for building user interfaces with components and hooks.
+- **Redux Toolkit** – Simplified and efficient state management solution for React.
+- **React Router** – Client-side routing to navigate between login, dashboards, and views.
+- **CSS** – Used for styling and creating a responsive layout.
+## 🔮 Future Improvements
 
-Important Notes
-This app uses mock authentication and in-memory state. All data resets on page refresh.
+- Integrate with a backend to enable:
+  - Real user authentication
+  - Persistent storage of leave requests and user data
+- Add notification system (e.g., toast alerts) for feedback on actions
+- Enhance form validation with better UX and error handling
+- Implement data persistence using:
+  - `localStorage`
+  - `IndexedDB`
+- Add role-based access control and user profile pages
+- Improve UI with a modern component library (e.g., Material UI or Tailwind CSS)
 
-No backend integration is included; it’s designed for frontend assessment and demonstration.
+## 📄 License
 
-Easily extended to include API calls for real-world use.
+This project is intended for **educational and demonstration purposes only**.
 
-Responsibilities are separated clearly for maintainability and scalable UI.
+Feel free to use, modify, or extend it for learning, assessments, or as a foundation for real-world applications.  
+No warranties or guarantees are provided.
 
-Technologies Used
-React.js (with hooks)
 
-Redux Toolkit for state management
-
-React Router for navigation
-
-CSS for styling components
-
-Future Improvements
-Integrate with backend for persistent data and real authentication.
-
-Add notifications and better UI feedback.
-
-Enhance form validations and user experience.
-
-Implement localStorage or IndexedDB to persist data across page reloads.
-
-License
-This project is for educational purposes and demo only.
