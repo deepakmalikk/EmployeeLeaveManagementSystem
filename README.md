@@ -36,7 +36,7 @@ index.js # Entry point, Redux Provider wrapping
 
 ---
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 ### 1. Clone the Repository
 
