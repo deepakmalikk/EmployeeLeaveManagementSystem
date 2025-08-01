@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Leave Management System (Frontend - React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Leave Management System frontend built using **React.js**, **Redux Toolkit**, and **React Router**.
 
-## Available Scripts
+This demo app allows employees to apply for leave and view leave statuses, while managers can review, approve, or reject leave requests.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Mock login** via a dropdown selecting a user (employee or manager — no real authentication)
+- **Employee View:**
+  - Apply for leave with type, start/end dates, and reason
+  - View submitted leave requests and approval status
+- **Manager View:**
+  - View all leave requests from employees
+  - Approve or reject pending leave requests
+- **Navigation** handled by React Router
+- **State management** with Redux Toolkit
+- **Form validation** to prevent invalid submissions
+- **Responsive layout** with a clean UI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🗂️ Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+/src
+/components # UI components: NavBar, LeaveForm, LeaveList
+/pages # Main pages: Login, EmployeeDashboard, ManagerDashboard
+/store # Redux slices and store setup
+/data # Hardcoded user data for demo login
+App.js # Main app, routes, and NavBar integration
+index.js # Entry point, Redux Provider wrapping
+```
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 How to Run Locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Clone the Repository
 
-### `npm run eject`
+```bash
+git clone https://github.com/deepakmalikk/EmployeeLeaveManagementSystem.git
+cd EmployeeLeaveManagementSystem
+```
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. Start the App
+```bash
+npm start
+```
+- The app will run at http://localhost:3000.
+## 📘 Usage Guide
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🔐 Login
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Select a user (Employee or Manager) from the dropdown on the login screen.
+- Employees are redirected to their dashboard.
+- Managers are taken to the management dashboard.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 👩‍💼 Employee Dashboard
 
-## Learn More
+- Fill out the form to apply for leave (all fields required).
+- View submitted leave requests and their current status.
+- Logout using the button in the top navigation bar.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🧑‍💼 Manager Dashboard
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- View all leave requests from employees.
+- Approve or reject pending requests using the provided buttons.
+- Logout using the button in the top navigation bar.
 
-### Code Splitting
+## ⚠️ Important Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- This app uses **mock authentication** with hardcoded users.
+- All state is **in-memory** — data will reset on page refresh.
+- There is **no backend integration** — the application is meant for frontend assessment and demonstration only.
+- Designed to be **easily extendable** with API calls and persistent data storage.
+- Code is structured with clear separation of concerns to support **maintainability and scalability**.
 
-### Analyzing the Bundle Size
+## 🛠️ Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **React.js** – Frontend library for building user interfaces with components and hooks.
+- **Redux Toolkit** – Simplified and efficient state management solution for React.
+- **React Router** – Client-side routing to navigate between login, dashboards, and views.
+- **CSS** – Used for styling and creating a responsive layout.
+## 🔮 Future Improvements
 
-### Making a Progressive Web App
+- Integrate with a backend to enable:
+  - Real user authentication
+  - Persistent storage of leave requests and user data
+- Add notification system (e.g., toast alerts) for feedback on actions
+- Enhance form validation with better UX and error handling
+- Implement data persistence using:
+  - `localStorage`
+  - `IndexedDB`
+- Add role-based access control and user profile pages
+- Improve UI with a modern component library (e.g., Material UI or Tailwind CSS)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📄 License
 
-### Advanced Configuration
+This project is intended for **educational and demonstration purposes only**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Feel free to use, modify, or extend it for learning, assessments, or as a foundation for real-world applications.  
+No warranties or guarantees are provided.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
