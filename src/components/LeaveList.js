@@ -6,10 +6,8 @@ function LeaveList({ forManager }) {
   const { user } = useSelector(state => state.auth);
   const requests = useSelector(state => state.leave.requests);
 
-  if (!user) return null;
+  if (!user) return null;      // prevents trying to access user after logout
 
-  // For employees: show only their requests
-  // For manager: show all requests
   const filtered = forManager ? requests : requests.filter(r => r.userId === user.id);
 
   return (

@@ -26,6 +26,7 @@ function LeaveForm() {
     setError("");
     setSuccess(false);
 
+    // defensive: prevent action if user vanished (during logout!)
     if (!form.type || !form.startDate || !form.endDate || !form.reason || !user) {
       setError("All fields are required.");
       return;

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateLeaveStatus } from "../store/leaveSlice";
 import { users } from "../data/users";
 import { useNavigate } from "react-router-dom";
+import './Dashboard.css';
 
 function ManagerDashboard() {
   const user = useSelector(state => state.auth.user);
@@ -10,12 +11,13 @@ function ManagerDashboard() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  // AUTH GUARD! Redirect to login if user logs out/unmounts.
   useEffect(() => {
     if (!user) navigate("/");
   }, [user, navigate]);
 
   return (
-    <div>
+    <div className="dashboard-container">
       <h2>Manager Dashboard</h2>
       <table>
         <thead>
